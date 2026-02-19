@@ -290,13 +290,10 @@
             font-weight: 700;
         }
 
-        /* Content Frame (for embedded tables) */
-        .content-frame {
-            border: none;
-            width: 100%;
-            min-height: 600px;
+        /* Embedded content tables - now directly integrated */
+        .embedded-content table {
             border-radius: 8px;
-            background: white;
+            overflow: hidden;
         }
 
         /* CTA Section */
@@ -1048,7 +1045,104 @@
             </div>
 
             <div class="embedded-content">
-                <iframe src="traffic-lights-table.html" class="content-frame" id="traffic-lights-frame"></iframe>
+                <div class="alert-box">
+                    <strong>⚠️ Most Important Rule</strong>
+                    <p>Traffic lights control the flow of traffic, but <strong>safety always comes first</strong>. Even with a green light, you must check that it's safe to proceed. Police officer signals override all traffic lights.</p>
+                </div>
+
+                <h3 style="font-size: 1.2rem; margin-top: 30px;">Basic Traffic Light Colors</h3>
+
+                <table style="width: 100%; border-collapse: collapse; background: white; margin: 20px 0;">
+                    <thead style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                        <tr>
+                            <th style="padding: 16px; text-align: left; font-size: 0.9rem; text-transform: uppercase;">Light Signal</th>
+                            <th style="padding: 16px; text-align: left; font-size: 0.9rem; text-transform: uppercase;">Meaning</th>
+                            <th style="padding: 16px; text-align: left; font-size: 0.9rem; text-transform: uppercase;">What to Do</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600; color: #2c3e50;">🔴 Solid Red</div>
+                                <span style="color: #666; font-size: 0.85rem; font-style: italic;">Luz Roja</span>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;"><strong>STOP</strong></td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-size: 0.9rem; color: #555;">
+                                You must stop completely before the intersection. Do not proceed until the light turns green.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600; color: #2c3e50;">🟡 Solid Amber (Yellow)</div>
+                                <span style="color: #666; font-size: 0.85rem; font-style: italic;">Luz Ámbar / Amarilla</span>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;"><strong>CAUTION - Prepare to stop</strong></td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-size: 0.9rem; color: #555;">
+                                Stop before the intersection <strong>if your speed and location permit</strong>. If you're too close or stopping would be unsafe, proceed and clear the intersection quickly.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px;">
+                                <div style="font-weight: 600; color: #2c3e50;">🟢 Solid Green</div>
+                                <span style="color: #666; font-size: 0.85rem; font-style: italic;">Luz Verde</span>
+                            </td>
+                            <td style="padding: 16px;"><strong>PROCEED</strong></td>
+                            <td style="padding: 16px; font-size: 0.9rem; color: #555;">
+                                <strong>Exception:</strong> If the intersection is blocked by other vehicles, do NOT enter, even if the light is green. Wait behind the line until there is space to clear the crossing.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 style="font-size: 1.2rem; margin-top: 30px;">Arrow Signals & Flashing Lights</h3>
+
+                <table style="width: 100%; border-collapse: collapse; background: white; margin: 20px 0;">
+                    <thead style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                        <tr>
+                            <th style="padding: 16px; text-align: left; font-size: 0.9rem; text-transform: uppercase;">Light Signal</th>
+                            <th style="padding: 16px; text-align: left; font-size: 0.9rem; text-transform: uppercase;">Meaning</th>
+                            <th style="padding: 16px; text-align: left; font-size: 0.9rem; text-transform: uppercase;">What to Do</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600; color: #2c3e50;">🟢⬅️ Green Arrow</div>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;"><strong>Proceed ONLY in arrow direction</strong></td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-size: 0.9rem; color: #555;">
+                                You can continue with caution only in the direction of the arrow and from the lane that this arrow controls.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600; color: #2c3e50;">🔴⬅️ Red Arrow + Green Light</div>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;"><strong>Go straight, but NO turning</strong></td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-size: 0.9rem; color: #555;">
+                                You may go straight or in other permitted directions, but turning in the direction of the red arrow is <strong>prohibited</strong>.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600; color: #2c3e50;">🔴⚡ Flashing Red</div>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;"><strong>Equivalent to STOP sign</strong></td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-size: 0.9rem; color: #555;">
+                                Legally equivalent to a STOP (PARE) sign. Stop completely, check all directions, then proceed when safe.
+                            </td>
+                        </tr>
+                        <tr style="background: #fffbf0;">
+                            <td style="padding: 16px;">
+                                <div style="font-weight: 600; color: #2c3e50;">👮 Police Officer Signal</div>
+                            </td>
+                            <td style="padding: 16px;"><strong>Officer OVERRIDES traffic light</strong></td>
+                            <td style="padding: 16px; font-size: 0.9rem; color: #555;">
+                                If a Police Officer signals you to advance, you <strong>must obey the officer</strong>, even if the traffic light is Red. The officer's hand signals have absolute priority over traffic lights.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
@@ -1068,7 +1162,67 @@
             </div>
 
             <div class="embedded-content">
-                <iframe src="speed-limits-table.html" class="content-frame" id="speed-limits-frame"></iframe>
+                <div class="alert-box">
+                    <strong>⚠️ GOLDEN RULE: Posted Signs Always Win</strong>
+                    <p>If you see a speed limit sign on the road, you MUST obey that sign - even if it's different from the default limits below.</p>
+                </div>
+
+                <h3 style="font-size: 1.2rem; margin-top: 30px;">Urban Speed Limits</h3>
+
+                <table style="width: 100%; border-collapse: collapse; background: white; margin: 20px 0;">
+                    <thead style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                        <tr>
+                            <th style="padding: 16px; text-align: left;">Road Type</th>
+                            <th style="padding: 16px; text-align: left;">Maximum Speed</th>
+                            <th style="padding: 16px; text-align: left;">Minimum Speed</th>
+                            <th style="padding: 16px; text-align: left;">Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600;">Streets & Alleys</div>
+                                <span style="color: #666; font-size: 0.85rem; font-style: italic;">Calles y Jirones</span>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;"><strong>40 km/h</strong></td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;"><strong>20 km/h</strong></td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-size: 0.9rem; color: #555;">Residential roads</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600;">Avenues</div>
+                                <span style="color: #666; font-size: 0.85rem; font-style: italic;">Avenidas</span>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;"><strong>60 km/h</strong></td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;"><strong>30 km/h</strong></td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-size: 0.9rem; color: #555;">Larger roads</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600;">Expressways</div>
+                                <span style="color: #666; font-size: 0.85rem; font-style: italic;">Vías Expresas</span>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;"><strong>80 km/h</strong></td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;"><strong>40 km/h</strong></td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-size: 0.9rem; color: #555;">Fastest in city</td>
+                        </tr>
+                        <tr style="background-color: #fffbf0;">
+                            <td style="padding: 16px;">
+                                <div style="font-weight: 600;">School Zones</div>
+                                <span style="color: #666; font-size: 0.85rem; font-style: italic;">Zonas Escolares</span>
+                            </td>
+                            <td style="padding: 16px;"><strong>30 km/h</strong></td>
+                            <td style="padding: 16px;"><strong>15 km/h</strong></td>
+                            <td style="padding: 16px; font-size: 0.9rem; color: #555;"><strong>SLOWEST - Extra caution</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box">
+                    <strong>💡 Memory Tip</strong>
+                    <p>"<strong>Streets 40, Avenues 60, Expressways 80</strong> - and always slow down to <strong>30 near schools</strong>."</p>
+                    <p><strong>Minimum Speed = Half of Maximum Speed</strong></p>
+                </div>
             </div>
         </section>
 
@@ -1096,7 +1250,66 @@
             </div>
 
             <div class="embedded-content">
-                <iframe src="right-of-way-table.html" class="content-frame" id="right-of-way-frame"></iframe>
+                <div class="alert-box">
+                    <strong>⚠️ Golden Rule</strong>
+                    <p>Right of way determines who goes first. <strong>Even if you have right of way, always check that it's safe before proceeding.</strong></p>
+                </div>
+
+                <h3 style="font-size: 1.2rem; margin-top: 30px;">Unregulated Intersections</h3>
+
+                <table style="width: 100%; border-collapse: collapse; background: white; margin: 20px 0;">
+                    <thead style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                        <tr>
+                            <th style="padding: 16px; text-align: left;">Situation</th>
+                            <th style="padding: 16px; text-align: left;">Who Has Priority?</th>
+                            <th style="padding: 16px; text-align: left;">What to Do</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600;">Two vehicles arrive simultaneously</div>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;"><strong>Vehicle from the RIGHT</strong></td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-size: 0.9rem; color: #555;">
+                                If a vehicle approaches from your right, you must yield. Think: "Right = Right of way"
+                            </td>
+                        </tr>
+                        <tr style="background: #fffbf0;">
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600;">Pedestrian at crossing</div>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;"><strong>Pedestrian ALWAYS</strong></td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-size: 0.9rem; color: #555;">
+                                Stop and yield to pedestrians crossing. Even if there's no traffic light, pedestrians have absolute priority.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600;">Entering roundabout</div>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;"><strong>Vehicles already inside</strong></td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-size: 0.9rem; color: #555;">
+                                Yield to all vehicles circulating inside the roundabout. Wait for a safe gap, then enter.
+                            </td>
+                        </tr>
+                        <tr style="background: #fff5f5;">
+                            <td style="padding: 16px;">
+                                <div style="font-weight: 600;">Railway crossing</div>
+                            </td>
+                            <td style="padding: 16px;"><strong>TRAIN - Absolute priority</strong></td>
+                            <td style="padding: 16px; font-size: 0.9rem; color: #555;">
+                                Trains ALWAYS have right of way. Never try to race a train!
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box">
+                    <strong>💡 Priority Hierarchy</strong>
+                    <p><strong>1. Police signals</strong> (override everything) → <strong>2. Traffic lights</strong> → <strong>3. Traffic signs</strong> → <strong>4. Right of way rules</strong></p>
+                    <p><strong>Pedestrians ALWAYS have priority!</strong></p>
+                </div>
             </div>
         </section>
 
@@ -1124,7 +1337,106 @@
             </div>
 
             <div class="embedded-content">
-                <iframe src="maneuvers-table.html" class="content-frame" id="maneuvers-frame"></iframe>
+                <div class="alert-box">
+                    <strong>⚠️ Golden Rule for All Maneuvers</strong>
+                    <p>Every maneuver requires three steps: <strong>Signal first, Check surroundings, Execute with caution</strong>.</p>
+                </div>
+
+                <h3 style="font-size: 1.2rem; margin-top: 30px;">Overtaking / Passing</h3>
+
+                <table style="width: 100%; border-collapse: collapse; background: white; margin: 20px 0;">
+                    <thead style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                        <tr>
+                            <th style="padding: 16px; text-align: left;">Situation</th>
+                            <th style="padding: 16px; text-align: left;">Rule</th>
+                            <th style="padding: 16px; text-align: left;">Important Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600;">Which side to overtake?</div>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;"><strong>LEFT side only</strong></td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-size: 0.9rem; color: #555;">
+                                Always overtake on the LEFT side, then return to your original lane.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600;">Discontinuous yellow line</div>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;"><strong>Overtaking permitted</strong></td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-size: 0.9rem; color: #555;">
+                                You can cross to overtake <strong>if it is safe to do so</strong>.
+                            </td>
+                        </tr>
+                        <tr style="background-color: #fff5f5;">
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600;">Continuous yellow line</div>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;"><strong>NO overtaking</strong></td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-size: 0.9rem; color: #555;">
+                                NOT permitted to cross for overtaking when the center line is continuous yellow.
+                            </td>
+                        </tr>
+                        <tr style="background-color: #fff5f5;">
+                            <td style="padding: 16px;">
+                                <div style="font-weight: 600;">Using horn to warn of overtaking</div>
+                            </td>
+                            <td style="padding: 16px;"><strong>PROHIBITED</strong></td>
+                            <td style="padding: 16px; font-size: 0.9rem; color: #555;">
+                                It is NOT permitted to use your horn to warn the driver ahead that you will overtake them.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 style="font-size: 1.2rem; margin-top: 30px;">Signaling Requirements</h3>
+
+                <table style="width: 100%; border-collapse: collapse; background: white; margin: 20px 0;">
+                    <thead style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                        <tr>
+                            <th style="padding: 16px; text-align: left;">Road Type</th>
+                            <th style="padding: 16px; text-align: left;">Signaling Distance</th>
+                            <th style="padding: 16px; text-align: left;">Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600;">Urban roads (city)</div>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;"><strong>At least 20 meters before</strong></td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-size: 0.9rem; color: #555;">
+                                Signal with directional lights 20m before turning
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600;">Highways (between cities)</div>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;"><strong>At least 30 meters before</strong></td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-size: 0.9rem; color: #555;">
+                                Signal with directional lights 30m before turning
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px;">
+                                <div style="font-weight: 600;">Duration</div>
+                            </td>
+                            <td style="padding: 16px;"><strong>ENTIRE maneuver</strong></td>
+                            <td style="padding: 16px; font-size: 0.9rem; color: #555;">
+                                Signal throughout the turn, not just at the start
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box">
+                    <strong>💡 Memory Tip</strong>
+                    <p>"<strong>LEFT to pass, Dashed = Yes, Solid = No. City = 20m, Highway = 30m.</strong> Signal the whole way through!"</p>
+                </div>
             </div>
         </section>
 
@@ -1144,7 +1456,88 @@
             </div>
 
             <div class="embedded-content">
-                <iframe src="mandatory-documents-table.html" class="content-frame" id="mandatory-docs-frame"></iframe>
+                <div class="alert-box">
+                    <strong>⚠️ Before You Drive</strong>
+                    <p>Make sure ALL required documents are in your vehicle. Police can request them at any time. Missing or expired documents = fines and penalties.</p>
+                </div>
+
+                <table style="width: 100%; border-collapse: collapse; background: white; margin: 20px 0;">
+                    <thead style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                        <tr>
+                            <th style="padding: 16px; text-align: left;">Document</th>
+                            <th style="padding: 16px; text-align: left;">Required?</th>
+                            <th style="padding: 16px; text-align: left;">Validity</th>
+                            <th style="padding: 16px; text-align: left;">Important Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600;">1. Identity Document</div>
+                                <span style="color: #666; font-size: 0.85rem; font-style: italic;">DNI o Pasaporte</span>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <span style="display: inline-block; background-color: #28a745; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem;">✅ REQUIRED</span>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">Check Expiration</td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-size: 0.9rem; color: #555;">
+                                Must be original, match license name
+                            </td>
+                        </tr>
+                        <tr style="background-color: #fff5f5;">
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600;">2. Driver's License</div>
+                                <span style="color: #666; font-size: 0.85rem; font-style: italic;">Licencia de Conducir</span>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <span style="display: inline-block; background-color: #28a745; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem;">✅ REQUIRED</span>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">5-10 Years</td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-size: 0.9rem; color: #555;">
+                                <strong>Cannot drive even 1 day expired</strong>. Penalty: Fine + Cannot obtain license for 3 years
+                            </td>
+                        </tr>
+                        <tr style="background-color: #fff5f5;">
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600;">3. SOAT Insurance</div>
+                                <span style="color: #666; font-size: 0.85rem; font-style: italic;">Seguro Obligatorio</span>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <span style="display: inline-block; background-color: #28a745; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem;">✅ REQUIRED</span>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">⏰ 1 YEAR</td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-size: 0.9rem; color: #555;">
+                                <strong>Digital version accepted</strong>. Covers medical costs for injuries. Cannot drive without valid SOAT.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600;">4. Vehicle ID Card</div>
+                                <span style="color: #666; font-size: 0.85rem; font-style: italic;">Tarjeta de Identificación</span>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <span style="display: inline-block; background-color: #28a745; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem;">✅ REQUIRED</span>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">♾️ Permanent</td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-size: 0.9rem; color: #555;">
+                                Must carry original card. Proves legal ownership.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px;">
+                                <div style="font-weight: 600;">6. Technical Inspection</div>
+                                <span style="color: #666; font-size: 0.85rem; font-style: italic;">Revisión Técnica (RTV)</span>
+                            </td>
+                            <td style="padding: 16px;">
+                                <span style="display: inline-block; background-color: #ffc107; color: #000; padding: 4px 10px; border-radius: 12px; font-size: 0.8rem;">⚠️ CONDITIONAL</span>
+                            </td>
+                            <td style="padding: 16px;">⏰ 1 YEAR</td>
+                            <td style="padding: 16px; font-size: 0.9rem; color: #555;">
+                                <strong>Required annually for vehicles 4+ years old</strong>. Not required 0-3 years.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
@@ -1165,7 +1558,112 @@
             </div>
 
             <div class="embedded-content">
-                <iframe src="sanctions-table.html" class="content-frame" id="sanctions-frame"></iframe>
+                <div class="alert-box">
+                    <strong>⚠️ Important</strong>
+                    <p>Traffic laws exist to protect everyone. This guide uses simple <strong>IF... THEN...</strong> format for easy memorization.</p>
+                </div>
+
+                <h3 style="font-size: 1.2rem; margin-top: 30px;">Driver's License Violations</h3>
+
+                <table style="width: 100%; border-collapse: collapse; background: white; margin: 20px 0;">
+                    <thead style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                        <tr>
+                            <th style="padding: 16px; text-align: left;">IF you do this...</th>
+                            <th style="padding: 16px; text-align: left;">THEN the penalty is...</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background-color: #fff5f5;">
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-weight: 600;">IF you drive without a driver's license</td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-weight: 600; color: #c0392b;">THEN: Fine + Cannot obtain license for 3 years</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-weight: 600;">IF your license is expired/invalid</td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-weight: 600; color: #c0392b;">THEN: You CANNOT drive at all (same as no license)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 style="font-size: 1.2rem; margin-top: 30px;">Point System</h3>
+
+                <table style="width: 100%; border-collapse: collapse; background: white; margin: 20px 0;">
+                    <thead style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                        <tr>
+                            <th style="padding: 16px; text-align: left;">IF you do this...</th>
+                            <th style="padding: 16px; text-align: left;">THEN the consequence is...</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-weight: 600;">IF you commit certain violations</td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-weight: 600; color: #c0392b;">THEN: Points are ADDED to your license</td>
+                        </tr>
+                        <tr style="background-color: #fff5f5;">
+                            <td style="padding: 16px; font-weight: 600;">IF you accumulate 100 points within 24 months</td>
+                            <td style="padding: 16px; font-weight: 600; color: #c0392b;">THEN: License SUSPENSION</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 style="font-size: 1.2rem; margin-top: 30px;">Alcohol & Drugs</h3>
+
+                <table style="width: 100%; border-collapse: collapse; background: white; margin: 20px 0;">
+                    <thead style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                        <tr>
+                            <th style="padding: 16px; text-align: left;">IF you do this...</th>
+                            <th style="padding: 16px; text-align: left;">THEN the penalty is...</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-weight: 600;">IF you are stopped with alcohol above legal limit OR under effects of drugs</td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-weight: 600; color: #c0392b;">THEN: Fine + License suspension for 3 years</td>
+                        </tr>
+                        <tr style="background-color: #fff5f5;">
+                            <td style="padding: 16px; font-weight: 600;">IF you have alcohol/drugs AND participated in accident OR refused test</td>
+                            <td style="padding: 16px; font-weight: 600; color: #c0392b;">THEN: Fine + Cancellation + PERMANENT disqualification</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="alert-box">
+                    <strong>⚠️ Never Drink and Drive</strong>
+                    <p>Alcohol/drug penalties are the MOST severe. You can lose your license permanently. Always choose a sober driver or taxi.</p>
+                </div>
+
+                <h3 style="font-size: 1.2rem; margin-top: 30px;">Common Violations</h3>
+
+                <table style="width: 100%; border-collapse: collapse; background: white; margin: 20px 0;">
+                    <thead style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                        <tr>
+                            <th style="padding: 16px; text-align: left;">Violation</th>
+                            <th style="padding: 16px; text-align: left;">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-weight: 600;">Don't stop completely at STOP sign</td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; color: #c0392b;">Violation ✅</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-weight: 600;">Use horn unnecessarily</td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; color: #c0392b;">Violation ✅</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; font-weight: 600;">Drive with engine in neutral</td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0; color: #c0392b;">Violation ✅</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px; font-weight: 600;">License plates in wrong place</td>
+                            <td style="padding: 16px; color: #c0392b;">Violation ✅</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box">
+                    <strong>💡 Recidivism Rule</strong>
+                    <p>If you commit the same violation within <strong>12 months</strong>, you'll pay <strong>DOUBLE the fine</strong>.</p>
+                </div>
             </div>
         </section>
 
@@ -1193,7 +1691,144 @@
             </div>
 
             <div class="embedded-content">
-                <iframe src="safety-responsibility-table.html" class="content-frame" id="safety-frame"></iframe>
+                <div class="alert-box">
+                    <strong>⚠️ Most Important Principle</strong>
+                    <p>Safety is EVERYONE'S responsibility. These rules exist to protect you, your passengers, and all road users. Following them isn't just about passing the exam - it's about <strong>saving lives</strong>.</p>
+                </div>
+
+                <h3 style="font-size: 1.2rem; margin-top: 30px;">SOAT & Seat Belts - Mandatory Safety</h3>
+
+                <table style="width: 100%; border-collapse: collapse; background: white; margin: 20px 0;">
+                    <thead style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                        <tr>
+                            <th style="padding: 16px; text-align: left; width: 40%;">Topic</th>
+                            <th style="padding: 16px; text-align: left; width: 60%;">Rule / Requirement</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background-color: #fff5f5;">
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600;">SOAT Insurance</div>
+                                <span style="color: #666; font-size: 0.85rem; font-style: italic;">Seguro Obligatorio</span>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;"><strong>Required to drive</strong> - Covers occupants AND third parties - Validity: <strong>1 year</strong> - Cannot drive without it</td>
+                        </tr>
+                        <tr style="background-color: #fff5f5;">
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600;">Seat Belts</div>
+                                <span style="color: #666; font-size: 0.85rem; font-style: italic;">Cinturones de seguridad</span>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;"><strong>MANDATORY for ALL:</strong> Front seats (always) + Rear seats (if factory-installed) - Not just for driver!</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 style="font-size: 1.2rem; margin-top: 30px;">Vehicle Lights - Proper Use</h3>
+
+                <table style="width: 100%; border-collapse: collapse; background: white; margin: 20px 0;">
+                    <thead style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                        <tr>
+                            <th style="padding: 16px; text-align: left; width: 40%;">Location / Situation</th>
+                            <th style="padding: 16px; text-align: left; width: 60%;">Light Type Required</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600;">Urban roads at night</div>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;"><strong>LOW beams</strong> (NOT 24/7 - only at night!)</td>
+                        </tr>
+                        <tr style="background-color: #fff5f5;">
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600;">Highways at night</div>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;"><strong>HIGH beams</strong> → Change to <strong>LOW beams</strong> BEFORE crossing opposite vehicles</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px;">
+                                <div style="font-weight: 600;">Fog / Tunnel</div>
+                            </td>
+                            <td style="padding: 16px;"><strong>LOW beams</strong> (+ fog lights in fog)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 style="font-size: 1.2rem; margin-top: 30px;">Vulnerable Users & Emergency Vehicles</h3>
+
+                <table style="width: 100%; border-collapse: collapse; background: white; margin: 20px 0;">
+                    <thead style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                        <tr>
+                            <th style="padding: 16px; text-align: left; width: 40%;">Who / Situation</th>
+                            <th style="padding: 16px; text-align: left; width: 60%;">Rule</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background-color: #fff5f5;">
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600;">Vulnerable users</div>
+                                <span style="color: #666; font-size: 0.85rem; font-style: italic;">Usuarios vulnerables</span>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;"><strong>Pedestrians, children, elderly, disabled, cyclists</strong> - Always have priority, even if you have green light</td>
+                        </tr>
+                        <tr style="background-color: #fff5f5;">
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600;">Schoolchildren crossing / School bus</div>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;"><strong>STOP completely</strong> - Do not overtake school bus picking up/dropping off students</td>
+                        </tr>
+                        <tr style="background-color: #fff5f5;">
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600;">Emergency vehicles</div>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">Yield ONLY when <strong>BOTH siren AND lights</strong> are on - No lights/siren = NO obligation</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 style="font-size: 1.2rem; margin-top: 30px;">Driver Fitness & Safe Behaviors</h3>
+
+                <table style="width: 100%; border-collapse: collapse; background: white; margin: 20px 0;">
+                    <thead style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
+                        <tr>
+                            <th style="padding: 16px; text-align: left; width: 40%;">Condition / Topic</th>
+                            <th style="padding: 16px; text-align: left; width: 60%;">Rule</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background-color: #fff5f5;">
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600;">Sleepy from medications</div>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;"><strong>Refrain from driving</strong></td>
+                        </tr>
+                        <tr style="background-color: #fff5f5;">
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600;">Distractions causing accidents</div>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">Worries + Cell phone + Radio manipulation = <strong>All cause accidents</strong></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;">
+                                <div style="font-weight: 600;">Technical inspection</div>
+                            </td>
+                            <td style="padding: 16px; border-bottom: 1px solid #e0e0e0;"><strong>Every year</strong> - Starts from <strong>4th year</strong> after manufacture</td>
+                        </tr>
+                        <tr style="background-color: #fff5f5;">
+                            <td style="padding: 16px;">
+                                <div style="font-weight: 600;">If accident occurs</div>
+                            </td>
+                            <td style="padding: 16px;"><strong>Notify insurance + Police station record</strong> - Do NOT abandon scene</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="info-box">
+                    <strong>🎯 Final Reminder</strong>
+                    <p>
+                    Safety is not optional - it's mandatory. <strong>SOAT protects everyone, seat belts save lives, proper lights prevent crashes, and respecting vulnerable users shows responsibility</strong>. These aren't just exam rules - they're lifesaving habits!
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -1295,26 +1930,7 @@
             });
         });
 
-        // Auto-adjust iframe heights for remaining embedded tables
-        function adjustIframeHeights() {
-            const iframes = document.querySelectorAll('.content-frame');
-            iframes.forEach(iframe => {
-                iframe.onload = function() {
-                    try {
-                        const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-                        iframe.style.height = iframeDoc.body.scrollHeight + 40 + 'px';
-                    } catch (e) {
-                        // If cross-origin, use default height
-                        iframe.style.height = '800px';
-                    }
-                };
-            });
-        }
-
-        // Initialize
-        window.addEventListener('load', () => {
-            adjustIframeHeights();
-        });
+        // All content is now embedded directly - no iframe adjustments needed
 
         // Console message
         console.log('%c🎓 JLML Theory Exam Preparation', 'font-size: 20px; font-weight: bold; color: #C1F11D;');
